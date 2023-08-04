@@ -14,7 +14,7 @@ struct EnvironmentValuesProvider: EnvironmentValuesProviderProtocol {
     
     init() {}
     
-    func get<T>(_ key: Domain.EnvironmentValuesKeys) -> T? {
+    func get<T>(_ key: EnvironmentValuesKeys) -> T? {
         guard let data = globalSettings?.data[key.rawValue], let value = data as? T else {
             return nil
         }

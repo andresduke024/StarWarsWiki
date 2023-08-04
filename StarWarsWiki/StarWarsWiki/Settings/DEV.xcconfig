@@ -5,4 +5,4 @@
 //  Created by Andres Duque on 4/08/23.
 //
 
-SERVICE_URL = https:/$()/swapi.dev/api/
+SERVICE_URL = https:/$()/swapi.dev/api

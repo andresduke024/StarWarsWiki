@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct StarWarsWikiApp: App {
     
-    init() { DIManager.start() }
+    init() { AppSetup.start() }
     
     var body: some Scene {
         WindowGroup {
