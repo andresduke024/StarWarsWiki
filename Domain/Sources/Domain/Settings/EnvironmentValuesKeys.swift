@@ -7,4 +7,6 @@
 
 import Foundation
 
-public enum EnvironmentValuesKeys {}
+public enum EnvironmentValuesKeys: String {
+    case serviceURL = "SERVICE_URL"
+}

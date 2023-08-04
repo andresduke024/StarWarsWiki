@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct StarWarsWikiApp: App {
+    
+    init() { DIManager.start() }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

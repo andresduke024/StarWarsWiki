@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct GlobalSettingsProvider {
+struct GlobalSettingsProvider: GlobalSettingsProviderProtocol {
+    init() {}
+    
     private let plist: [String: Any] = {
         guard let dictionary = Bundle.main.infoDictionary else {
             fatalError("Plist file not found")

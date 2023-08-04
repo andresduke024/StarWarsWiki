@@ -3,6 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>GlobalSettings</key>
-	<dict/>
+	<dict>
+		<key>SERVICE_URL</key>
+		<string>$(SERVICE_URL)</string>
+	</dict>
 </dict>
 </plist>
