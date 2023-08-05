@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 struct Film: Codable {
     let title: String
@@ -24,8 +25,4 @@ struct Film: Codable {
         case releaseDate = "release_date"
         case characters, planets, starships, vehicles, species, created, edited, url
     }
-}
-
-extension Film: Identifiable {
-    var id: Int { episodeID }
 }

@@ -6,15 +6,19 @@
 //
 
 import Foundation
+import Domain
 import swift_dependency_injector
-
 
 class FilmsObservableObject: ObservableObject {
     
     @Injectable
     private var getFilmsUseCase: GetFilmsUseCaseProtocol?
     
-    @Published var data: [Film] = []
+    private var films: [Film] = [] {
+        didSet { data = films }
+    }
+    
+    @Published var data: [any ViewRepresentableModel] = []
     
     func fetch() {
         guard let getFilmsUseCase else { return }

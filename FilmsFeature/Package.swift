@@ -13,14 +13,15 @@ let package = Package(
             targets: ["FilmsFeature"]),
     ],
     dependencies: [
-        .package(path: "../Domain")
+        .package(path: "../Domain"),
+        .package(path: "../UIComponents")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "FilmsFeature",
-            dependencies: ["Domain"]),
+            dependencies: ["Domain", "UIComponents"]),
         .testTarget(
             name: "FilmsFeatureTests",
             dependencies: ["FilmsFeature"]),

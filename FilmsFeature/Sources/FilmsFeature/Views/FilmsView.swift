@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIComponents
 
 public struct FilmsView: View {
     
@@ -15,11 +16,10 @@ public struct FilmsView: View {
     public init() {}
     
     public var body: some View {
-        VStack {
-            ForEach(observableObject.data) { item in
-                Text(item.title)
-            }
-        }.onAppear {
+        CarouselView(
+            title: "Films",
+            items: $observableObject.data
+        ).onAppear {
             observableObject.fetch()
         }
     }
