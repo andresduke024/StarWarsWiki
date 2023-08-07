@@ -16,6 +16,7 @@ struct AppSetup {
         
         injector.register(GlobalSettingsProviderProtocol.self, implementation: GlobalSettingsProvider.instance)
         injector.register(EnvironmentValuesProviderProtocol.self, implementation: EnvironmentValuesProvider.instance)
+        injector.register(AnalyticsManagerProtocol.self, implementation: AnalyticsManager.instance)
         
         Domain.setup()
         FilmsFeature.setup()

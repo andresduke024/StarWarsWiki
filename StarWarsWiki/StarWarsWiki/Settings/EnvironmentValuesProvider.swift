@@ -7,6 +7,7 @@
 
 import Foundation
 import Domain
+import UIKit
 import swift_dependency_injector
 
 struct EnvironmentValuesProvider: EnvironmentValuesProviderProtocol {
@@ -20,5 +21,9 @@ struct EnvironmentValuesProvider: EnvironmentValuesProviderProtocol {
         }
         
         return value
+    }
+    
+    func getDeviceId() -> String? {
+        UIDevice.current.identifierForVendor?.uuidString
     }
 }
