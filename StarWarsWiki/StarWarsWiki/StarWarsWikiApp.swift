@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct StarWarsWikiApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     init() { AppSetup.start() }
     
@@ -18,3 +19,4 @@ struct StarWarsWikiApp: App {
         }
     }
 }
+
